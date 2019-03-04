@@ -1,6 +1,6 @@
 '''Parses the book my show website'''
 try:
-    import urllib
+    import urllib.request
     import re
     from urllib.error import URLError, HTTPError
 except ImportError as err:
