@@ -29,9 +29,9 @@ class movie_parser():
         else:
             self.city_name = city_name
             api_name = movie_name.lower().replace(' ', '-')
-            demo = parser()
-            demo1 = demo.get_now_showing(demo.get_html(city_name))
-            for movie in demo1:
+            book_myshow_parser_obj = parser()
+            show_parser = book_myshow_parser_obj.get_now_showing(book_myshow_parser_obj.get_html(city_name))
+            for movie in show_parser:
                 if (movie[0].lower()).__contains__(api_name):
                     return movie
     
@@ -49,5 +49,5 @@ class movie_parser():
             except Exception as err:
                 return "%s"%err
 
-snake = movie_parser()
-print(snake.get_movie_html(snake.santitizer('trivandrum', 'june')))
+# snake = movie_parser()
+# print(snake.get_movie_html(snake.santitizer('trivandrum', 'june')))
