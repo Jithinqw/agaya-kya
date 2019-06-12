@@ -30,6 +30,7 @@ class parser():
                 request = urllib.request.Request(self.url+city_name.lower()+'/movies', headers={'User-Agent' : "Magic Browser"}) 
                 read_html = urllib.request.urlopen(request).read()
                 santitized_html = ((read_html).decode('utf-8'))
+                print(santitized_html)
                 return santitized_html
             except HTTPError as e:
                 return "%s" %e
@@ -46,6 +47,7 @@ class parser():
         if html is None:
             return False
         else:
+            print(re.findall(self.NOW_SHOWING, html))
             return re.findall(self.NOW_SHOWING, html)
     
 # snake = book_my_show_parser()

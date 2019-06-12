@@ -12,6 +12,7 @@ def getdetailsbycity():
     try:
         city = request.json['city']
         parser = book_my_show_parser.parser()
+        print(parser.get_html(city))
         return jsonify(parser.get_now_showing(parser.get_html(city)))
     except Exception as err:
         return "%s"%err
