@@ -1,4 +1,4 @@
-'''Flask route for Flask route'''
+"""Flask route for Flask route"""
 try:
     import os, sys
     from flask import request, jsonify
@@ -7,15 +7,17 @@ try:
 except ImportError as err:
     raise err
 
-@routes.route('/getdetailsbycity', methods=['POST'])
+
+@routes.route("/getdetailsbycity", methods=["POST"])
 def getdetailsbycity():
     try:
-        city = request.json['city']
+        city = request.json["city"]
         parser = book_my_show_parser.parser()
-        return jsonify(parser.get_now_showing(parser.get_html(city)))
+        if len(parser.get_now_showing(parser.get_html(city))) is 0:
+            return jsonify(
+               "No user films found for this city or this city does not exist"
+            )
+        else:
+            return jsonify(parser.get_now_showing(parser.get_html(city)))
     except Exception as err:
-        return "%s"%err
-    
-@routes.route('/getdetailsbymovie', methods=['POST'])
-def getdetailsbymovie():
-    return jsonify('Movie')
+        return "%s" % err
