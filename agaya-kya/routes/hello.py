@@ -5,6 +5,7 @@ try:
 except ImportError as err:
     raise err
 
-@routes.route('/ping')
+
+@routes.route("/ping")
 def ping():
-    return jsonify('Agaya is alive')
+    return jsonify("Agaya is alive")

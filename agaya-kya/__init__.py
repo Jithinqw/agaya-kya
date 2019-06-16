@@ -1,1 +1,1 @@
-'''Main application package'''
+"""Main application package"""
