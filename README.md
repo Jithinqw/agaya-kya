@@ -17,3 +17,13 @@ Run ```python3 agayakya.py``` to run the server.
 ## Configuration 
 
 This server file runs on ```config.ini``` located at ```./lib``` folder. Change configurations accordingly. 
+
+## Running Docker
+
+### Running Docker Image
+Build agaya image using ```docker build -t aagaya .``` in your terminal where your ```Dockerfile``` is located. 
+Run the image using ```docker run -p 5000:5000 -t aagaya```.
+
+### Running Docker Container using docker-compose
+
+Run ```docker-compose up --build``` in your terminal.
