@@ -8,6 +8,7 @@ This uses Book_my_show to parse the data and show it.
 - [x] Python3 
 - [x] Flask
 - [x] urllib
+- [x] gunicorn (Not required, only for deployment)
 
 ## Installation 
 
