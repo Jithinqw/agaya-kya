@@ -1,4 +1,4 @@
-"""Main server file for aagaya"""
+"""Main server file for aagaya-kya"""
 
 __author__ = "Jithin Zacharia"
 __version__ = "0.0.1"
@@ -8,9 +8,7 @@ try:
     from flask import Flask, request, jsonify
     from flask_cors import CORS
     from os import urandom
-
     sys.path.insert(0, "./config")
-    from config import server_configuration
     from lib.configurationParser import read_configuration
     from routes import *
 except ImportError as err:
@@ -21,7 +19,6 @@ except ImportError as err:
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
 app.register_blueprint(routes)
-configuration = server_configuration()
 app.secret_key = read_configuration("SERVER_SECRET")
 
 if __name__ == "__main__":

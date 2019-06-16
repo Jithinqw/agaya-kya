@@ -12,3 +12,7 @@ This uses Book_my_show to parse the data and show it.
 ## Installation 
 
 Run ```python3 agayakya.py``` to run the server. 
+
+## Configuration 
+
+This server file runs on ```config.ini``` located at ```./lib``` folder. Change configurations accordingly. 

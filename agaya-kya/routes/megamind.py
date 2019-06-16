@@ -15,7 +15,7 @@ def getdetailsbycity():
         parser = book_my_show_parser.parser()
         if len(parser.get_now_showing(parser.get_html(city))) is 0:
             return jsonify(
-                "No user films found for this city or this city does not exist"
+               "No user films found for this city or this city does not exist"
             )
         else:
             return jsonify(parser.get_now_showing(parser.get_html(city)))

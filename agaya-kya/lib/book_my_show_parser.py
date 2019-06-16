@@ -49,4 +49,5 @@ class parser:
         if html is None:
             return False
         else:
+            print(re.findall(self.NOW_SHOWING, html))
             return re.findall(self.NOW_SHOWING, html)
