@@ -1,6 +1,5 @@
 try:
-    import os, sys
-    from flask import request, jsonify
+    from flask import jsonify
     from . import routes
 except ImportError as err:
     raise err

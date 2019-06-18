@@ -4,16 +4,15 @@ __author__ = "Jithin Zacharia"
 __version__ = "0.0.1"
 
 try:
-    import sys, time, logging
-    from flask import Flask, request, jsonify
+    import sys, logging
+    from flask import Flask
     from flask_cors import CORS
-    from os import urandom
     sys.path.insert(0, "./config")
     from lib.configurationParser import read_configuration
     from routes import *
 except ImportError as err:
-    raise err
     Flask = None
+    raise err
 
 
 app = Flask(__name__)

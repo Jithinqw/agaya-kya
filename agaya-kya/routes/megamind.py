@@ -1,6 +1,5 @@
 """Flask route for Flask route"""
 try:
-    import os, sys
     from flask import request, jsonify
     from . import routes
     from lib import book_my_show_parser
