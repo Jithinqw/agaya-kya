@@ -1,7 +1,5 @@
 # agaya-kya
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3de08b1346d84652a7000f4116e3c0c2)](https://app.codacy.com/app/Jithinqw/agaya-kya?utm_source=github.com&utm_medium=referral&utm_content=Jithinqw/agaya-kya&utm_campaign=Badge_Grade_Dashboard)
-
 [![Build Status](https://travis-ci.org/Jithinqw/agaya-kya.svg?branch=master)](https://travis-ci.org/Jithinqw/agaya-kya)
 
 Know which movies are showing in your city. Just pass the city name and ```agaya-kya``` can tell agaya-kya?. 
