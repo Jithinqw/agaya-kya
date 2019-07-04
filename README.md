@@ -20,6 +20,10 @@ Run ```python3 agayakya.py``` to run the server.
 
 This server file runs on ```config.ini``` located at ```./lib``` folder. Change configurations accordingly. 
 
+## Running Tests
+
+Run test by ```python3 -m pytest tests/``` in ```agaya-kya``` folder.
+
 ## Running Docker
 
 ### Running Docker Image
